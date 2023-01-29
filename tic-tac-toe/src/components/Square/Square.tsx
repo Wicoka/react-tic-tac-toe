@@ -2,18 +2,17 @@ import { FC } from 'react';
 
 interface SquareProps {
   actualPlayer: 'X' | 'O';
+  value: 'X' | 'O' | null;
+  onSquareClick: any;
 }
 
-const Square: FC<SquareProps> = (props) => {
-  const handleSquareClick = () => {
-    console.log('Square clicked!');
-  };
+const Square: FC<SquareProps> = ({ actualPlayer, value, onSquareClick }) => {
   return (
     <button
       className="h-9 w-9 text-2xl border-2 border-solid border-neutral-600"
-      onClick={handleSquareClick}
+      onClick={onSquareClick}
     >
-      X
+      {value}
     </button>
   );
 };
