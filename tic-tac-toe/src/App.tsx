@@ -1,10 +1,10 @@
 import './App.css';
-import Square from './components/Square/Square';
+import Game from './components/Game/Game';
 
 function App() {
   return (
     <>
-      <Square />
+      <Game />
     </>
   );
 }

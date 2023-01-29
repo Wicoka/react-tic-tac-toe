@@ -1,12 +1,28 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
+import Square from '../Square/Square';
 
+interface BoardProps {
+  actualPlayer: 'X' | 'O';
+}
 
-interface BoardProps {}
-
-const Board: FC<BoardProps> = () => (
-  <div>
-    Board Component
-  </div>
+const Board: FC<BoardProps> = ({ actualPlayer }) => (
+  <>
+    <div className="flex">
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+    </div>
+    <div className="flex">
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+    </div>
+    <div className="flex">
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+      <Square actualPlayer={actualPlayer} />
+    </div>
+  </>
 );
 
 export default Board;

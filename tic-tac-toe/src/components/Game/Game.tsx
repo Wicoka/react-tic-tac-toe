@@ -1,7 +1,16 @@
 import { FC } from 'react';
+import Board from '../Board/Board';
 
 interface GameProps {}
 
-const Game: FC<GameProps> = () => <div>Game Component</div>;
+const Game: FC<GameProps> = () => {
+  const actualPlayer = 'X';
+  return (
+    <div>
+      Game Component
+      <Board actualPlayer={actualPlayer} />
+    </div>
+  );
+};
 
 export default Game;
